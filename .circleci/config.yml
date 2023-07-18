@@ -4,9 +4,10 @@ orbs:
   aws-cli: circleci/aws-cli@2.0.3
 
 jobs:
-  create_infrastructure: bash create_infrastructure: 
-  docker: 
-    - image: amazon/aws-cli 
+  create_infrastructure: 
+    bash create_infrastructure: 
+      docker: 
+        - image: amazon/aws-cli 
   steps: 
     - checkout 
   run: 
