@@ -37,9 +37,9 @@ jobs:
           name: smoke test
           command: if curl -s --head "https://blog.udacity.com/"
             then
-              exit 0
+              echo 0
             else
-              exit 1
+              echo 1
             fi
 workflows:
   myWorkflow:
