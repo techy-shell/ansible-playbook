@@ -10,9 +10,9 @@ Resources:
       BucketName: !Sub "${MyBucketName}"
       PublicAccessBlockConfiguration:
         BlockPublicAcls: false
-        OwnershipControls:
-          Rules:
-            - ObjectOwnership: ObjectWriter
+      OwnershipControls:
+        Rules:
+          - ObjectOwnership: ObjectWriter
       WebsiteConfiguration:
         IndexDocument: index.html
         ErrorDocument: error.html
