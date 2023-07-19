@@ -35,11 +35,14 @@ jobs:
       - run: apk add --update curl
       - run:
           name: smoke test
-          command: if curl -s --head "https://blog.udacity.com/"
+          command: |
+            URL="https://blog.udacity.com/"
+            # Test if website exists
+            if curl -s --head ${URL} 
             then
-              echo 0
+              return 0
             else
-              echo 1
+              return 1
             fi
 workflows:
   myWorkflow:
